@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { IArticle } from './article';
+import { Observable } from 'rxjs/Observable';
+
 
 @Injectable()
 export class ArticlesService {
 
-  constructor() { }
+  private _url: string = 'http://localhost:1337/article';
 
-  getArticles() {
+  constructor(private htpp: HttpClient) { }
 
-    return [
-      {"id": 1, "libelle": "Coca Cola", "pu": 300},
-      {"id": 2, "libelle": "Fanta", "pu": 300},
-      {"id": 3, "libelle": "Youki", "pu": 200},
-      {"id": 4, "libelle": "Planet", "pu": 200},
-      {"id": 5, "libelle": "Orangina", "pu": 500},
-    ];
+  getArticles(): Observable<IArticle[]> {
+    return this.htpp.get<IArticle[]>(this._url);
   }
-
+ 
 }

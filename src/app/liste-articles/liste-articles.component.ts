@@ -13,7 +13,8 @@ export class ListeArticlesComponent implements OnInit {
   constructor(private _articlesService: ArticlesService) { }
 
   ngOnInit() {
-    this.articles = this._articlesService.getArticles();
+    this._articlesService.getArticles()
+        .subscribe(data => this.articles = data );
   }
 
 }

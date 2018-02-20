@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ListeArticlesComponent } from './liste-articles/liste-articles.component';
 import { ArticlesService } from './articles.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ArticlesService } from './articles.service';
     ListeArticlesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [ArticlesService],
   bootstrap: [AppComponent]

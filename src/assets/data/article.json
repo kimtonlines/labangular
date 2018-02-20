@@ -1,0 +1,23 @@
+[
+    {
+    "id": 1,
+    "libelle": "Cocala",
+    "pu": 300
+    },
+    {
+    "id": 2,
+    "libelle": "Fanta",
+    "pu": 300
+    },
+    {
+    "id": 3,
+    "libelle": "Youki",
+    "pu": 200
+    },
+    {
+    "id": 4,
+    "libelle": "Planet",
+    "pu": 200
+    }
+
+]
