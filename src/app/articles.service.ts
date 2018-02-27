@@ -8,6 +8,8 @@ import { Observable } from 'rxjs/Observable';
 export class ArticlesService {
 
   private _url: string = 'http://localhost:1337/article';
+  private _urlid: string = 'http://localhost:1337/article/7';
+
 
   constructor(private htpp: HttpClient) { }
 
@@ -15,4 +17,7 @@ export class ArticlesService {
     return this.htpp.get<IArticle[]>(this._url);
   }
  
+  getArticleByID(): Observable<IArticle> {
+    return this.htpp.get<IArticle>(this._urlid);
+  }
 }
