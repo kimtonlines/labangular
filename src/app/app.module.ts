@@ -7,6 +7,7 @@ import { ListeArticlesComponent } from './liste-articles/liste-articles.componen
 import { ArticlesService } from './articles.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsArticleComponent } from './details-article/details-article.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DetailsArticleComponent } from './details-article/details-article.compo
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [ArticlesService],
   bootstrap: [AppComponent]
